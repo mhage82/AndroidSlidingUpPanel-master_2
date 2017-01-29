@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_join"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:layout_margin="0px"
+    android:background="@color/SteelBlue"
+    tools:context="com.sothree.slidinguppanel.demo.screens.JoinActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/gameTitleJoinTV"
+        android:textSize="36sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:layout_centerHorizontal="true"
+        android:background="@color/StatusBarBlue"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/gameTitleJoinTV"
+        android:id="@+id/mapimage"/>
+
+    <Button
+        android:text="Directions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/directionsButton"
+        android:background="@color/StatusBarBlue"
+        android:layout_below="@+id/mapimage"
+        android:layout_centerHorizontal="true"
+        android:onClick="directionsClick"/>
+    <ListView
+        android:id="@+id/joinList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@+id/directionsButton" />
+
+    <Button
+        android:text="Join Game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/joinButton"
+        android:background="@color/StatusBarBlue"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="joinGameClick"/>
+
+</RelativeLayout>

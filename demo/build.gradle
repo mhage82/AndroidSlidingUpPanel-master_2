@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        CourtSide {
+            keyAlias 'CourtSide'
+            keyPassword 'pol1245m'
+            storeFile file('C:/Users/mohammadhage82/keystores/anroid.jks')
+            storePassword 'pol1245m'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    lintOptions {
+        abortOnError false
+    }
+    defaultConfig {
+        minSdkVersion 11
+        targetSdkVersion 23
+        applicationId "com.courtside.demo"
+        vectorDrawables.useSupportLibrary = true
+    }
+}
+
+dependencies {
+    compile project(':library')
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.google.android.gms:play-services-maps:9.6.1'
+    compile 'com.google.android.gms:play-services-places:9.6.1'
+    compile 'com.google.android.gms:play-services-appindexing:9.6.1'
+    compile 'com.android.support:support-vector-drawable:23.4.0'
+}

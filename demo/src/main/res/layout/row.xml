@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10px">
+
+    <TextView
+        style="@style/RowTheme1"
+        android:text="element_title"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10px"
+        android:id="@+id/element_title" />
+    <TextView
+        style="@style/RowTheme1"
+        android:text="gameTypeTV"
+        android:layout_below="@+id/element_title"
+        android:id="@+id/gameTypeTV" />
+    <TextView
+        style="@style/RowTheme1"
+        android:text="gameTimeTV"
+        android:layout_below="@+id/gameTypeTV"
+        android:id="@+id/gameTimeTV" />
+    <TextView
+        style="@style/RowTheme1"
+        android:text="remainSeatsTV"
+        android:layout_below="@+id/gameTimeTV"
+        android:layout_marginBottom="10px"
+        android:id="@+id/remainSeatsTV" />
+
+</RelativeLayout>

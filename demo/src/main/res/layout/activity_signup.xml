@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_signup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.sothree.slidinguppanel.demo.screens.SignupActivity"
+    android:background="@color/SteelBlue">
+
+    <EditText
+        android:inputType="textPersonName"
+        android:hint="Email"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/emailSignupET"
+        style="@style/EditTextTheme1"/>
+
+    <EditText
+        android:inputType="textPassword"
+        android:layout_below="@+id/emailSignupET"
+        android:id="@+id/passwordSignupET"
+        style="@style/EditTextTheme1"
+        android:hint="Password"/>
+
+    <EditText
+        android:inputType="textPassword"
+        android:layout_below="@+id/passwordSignupET"
+        android:id="@+id/passwordRetypeET"
+        style="@style/EditTextTheme1"
+        android:hint="Retype Password" />
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_below="@+id/passwordRetypeET"
+        android:id="@+id/displayNameET"
+        style="@style/EditTextTheme1"
+        android:hint="Display Name"/>
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_below="@+id/displayNameET"
+        android:id="@+id/phoneET"
+        style="@style/EditTextTheme1"
+        android:hint="Phone"/>
+    <Button
+        android:text="Signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phoneET"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/signupRegBTN"
+        android:background="@color/StatusBarBlue"
+        android:onClick="signupRegClick"/>
+</RelativeLayout>

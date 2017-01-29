@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sothree.slidinguppanel.demo.screens.PostActivity"
+    android:background="@color/SteelBlue"
+    android:padding="0dp"
+    android:layout_margin="0dp">
+
+
+    <TextView
+        android:text="Game Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:id="@+id/textView"
+        android:textStyle="bold"
+        android:textSize="36sp"
+        android:textColor="@color/StatusBarBlue"
+        android:textAlignment="center" />
+
+
+    <EditText
+        android:hint="Title"
+        android:layout_below="@+id/textView"
+        android:id="@+id/titleET"
+        style="@style/EditTextTheme3"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"/>
+    <!--<EditText-->
+    <!--android:hint="number of players(1 to 5)"-->
+    <!--android:layout_below="@+id/titleET"-->
+    <!--android:id="@+id/playerscountET"-->
+    <!--style="@style/EditTextTheme1"/>-->
+
+    <Spinner
+        style="@style/EditTextTheme3"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:id="@+id/spinner"
+        android:layout_below="@+id/titleET"
+        android:background="@android:drawable/btn_dropdown"/>
+
+    <EditText
+        style="@style/EditTextTheme3"
+        android:hint="Type in custom game type"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@+id/titleET"
+        android:id="@+id/gameTypeET"
+        android:visibility="invisible"/>
+
+    <EditText
+        android:layout_below="@+id/spinner"
+        android:id="@+id/countET"
+        android:hint="Number of players"
+        android:inputType="number"
+        style="@style/EditTextTheme3"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"/>
+
+
+    <CheckBox
+        android:text="Use Current Location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/countET"
+        android:id="@+id/postCHK"
+        android:shadowColor="#ffffff"
+        android:textColor="#000000"
+        android:textColorLink="#000000"
+        android:textColorHint="#000000"
+        android:textColorHighlight="#000000"
+        android:background="#ffffff"
+        android:layout_alignLeft="@+id/titleET"
+        android:layout_alignStart="@+id/titleET"
+        android:layout_alignRight="@+id/titleET"
+        android:layout_alignEnd="@+id/titleET"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/postCHK"
+        android:layout_alignLeft="@id/countET"
+        android:layout_alignStart="@id/countET"
+        android:layout_alignEnd="@+id/countET"
+        android:layout_alignRight="@+id/countET"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff"
+        android:layout_marginBottom="50px"
+        android:id="@+id/search_layout">
+
+
+        <fragment
+            android:id="@+id/place_autocomplete_fragment_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditTextTheme1"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"/>
+
+    </RelativeLayout>
+    <!--<DatePicker-->
+        <!--android:id="@+id/dpResult"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_layout"
+        android:layout_marginBottom="10px"
+        android:layout_alignLeft="@+id/titleET"
+        android:layout_alignStart="@+id/titleET"
+        android:layout_alignRight="@+id/titleET"
+        android:layout_alignEnd="@+id/titleET"
+        android:textSize="36sp"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:background="#ffffff"
+        android:inputType="time"
+        android:hint="START TIME"
+        android:onClick="showStartTimePickerDialog"
+        android:id="@+id/pickTimeStartTV"
+        android:tag="startTime"/>
+    <!--android:layout_alignRight="@+id/titleET"-->
+    <!--android:layout_alignEnd="@+id/titleET"-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_below="@+id/pickTimeStartTV"
+        android:layout_marginBottom="10px"
+        android:layout_alignLeft="@+id/titleET"
+        android:layout_alignStart="@+id/titleET"
+        android:layout_alignRight="@+id/titleET"
+        android:layout_alignEnd="@+id/titleET"
+        android:inputType="time"
+        android:textSize="36sp"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:background="#ffffff"
+        android:hint="END TIME"
+        android:onClick="showEndTimePickerDialog"
+        android:id="@+id/pickTimeEndTV"
+        android:tag="endTime"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_below="@+id/pickTimeEndTV"
+        android:layout_marginBottom="10px"
+        android:layout_alignLeft="@+id/titleET"
+        android:layout_alignStart="@+id/titleET"
+        android:layout_alignRight="@+id/titleET"
+        android:layout_alignEnd="@+id/titleET"
+        android:inputType="date"
+        android:textSize="36sp"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:background="#ffffff"
+        android:hint="DATE"
+        android:onClick="showDatePickerDialog"
+        android:id="@+id/pickDateTV"
+        android:tag="endTime"/>
+    <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100px"-->
+        <!--android:layout_below="@+id/pickDateTV"-->
+        <!--android:layout_marginBottom="10px"-->
+        <!--android:layout_alignLeft="@+id/titleET"-->
+        <!--android:layout_alignStart="@+id/titleET"-->
+        <!--android:layout_alignRight="@+id/titleET"-->
+        <!--android:layout_alignEnd="@+id/titleET"-->
+        <!--android:inputType="text"-->
+        <!--android:textSize="30sp"-->
+        <!--android:textColor="#000000"-->
+        <!--android:textAlignment="center"-->
+        <!--android:background="#ffffff"-->
+        <!--android:hint="Duration in minutes"-->
+        <!--android:id="@+id/durationET"/>-->
+    <Button
+        android:text="Post Game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/pickDateTV"
+        android:id="@+id/postBTN"
+        android:background="@color/StatusBarBlue"
+        android:onClick="postClick"/>
+
+
+
+</RelativeLayout>

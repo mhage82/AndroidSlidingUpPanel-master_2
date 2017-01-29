@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.sothree.slidinguppanel.demo.screens.LoginActivity"
+    android:background="@drawable/sports_back2">
+
+    <EditText
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/emailET"
+        android:text="mhage82@gmail.com"
+        style="@style/EditTextTheme1"/>
+    <EditText
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:layout_below="@+id/emailET"
+        android:id="@+id/passwordET"
+        android:text="pol1245m"
+        style="@style/EditTextTheme1"/>
+
+
+    <Button
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordET"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/loginBTN"
+        android:background="@color/StatusBarBlue"
+        android:onClick="loginClick"/>
+
+    <TextView
+        android:text="Not a user yet?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signupTV"
+        android:textSize="18sp"
+        android:textColor="@color/StatusBarBlue"
+        android:layout_alignBaseline="@+id/signupBTN"
+        android:layout_alignBottom="@+id/signupBTN"
+        android:layout_alignLeft="@+id/passwordET"
+        android:layout_alignStart="@+id/passwordET" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signupBTN"
+        android:text="Signup"
+        android:textColor="@color/StatusBarBlue"
+        android:textSize="18sp"
+        android:background="@android:color/transparent"
+        android:textAllCaps="false"
+        android:layout_below="@+id/loginBTN"
+        android:layout_alignLeft="@+id/loginBTN"
+        android:layout_alignStart="@+id/loginBTN"
+        android:layout_marginTop="13dp"
+        android:onClick="signupClick"/>
+</RelativeLayout>

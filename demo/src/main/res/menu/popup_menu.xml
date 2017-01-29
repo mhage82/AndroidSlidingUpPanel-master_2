@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Settings"
+        android:id="@+id/settings"
+        app:showAsAction="always" />
+
+    <item android:title="Profile"
+        android:id="@+id/profile"
+        app:showAsAction="always" />
+
+    <item android:title="Joined Events"
+        android:id="@+id/joined_events"
+        app:showAsAction="always" />
+
+    <item android:title="Listed Events"
+        android:id="@+id/listed_events"
+        app:showAsAction="always" />
+
+    <item android:title="Help"
+        android:id="@+id/help"
+        app:showAsAction="always" />
+
+</menu>
